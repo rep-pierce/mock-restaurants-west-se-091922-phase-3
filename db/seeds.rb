@@ -22,5 +22,9 @@ puts "Creating reviews..."
 # * and a review belongs to a customer.                              *
 # ********************************************************************
 # Create reviews Here
+shack_review = Review.create(star_rating: 3, restaurant_id: 1, customer_id: 1)
+shack_other_review = Review.create(star_rating: 4, restaurant_id: 1, customer_id: 2)
+bistro_review = Review.create(star_rating: 1, restaurant_id: 2, customer_id: 4)
+palace_review = Review.create(star_rating: 5, restaurant_id: 3, customer_id: 5)
 
 puts "Seeding done!"
