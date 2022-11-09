@@ -5,8 +5,14 @@ class Customer < ActiveRecord::Base
     def full_name
         "#{self.first_name} #{self.last_name}"
     end
-
+    
     def favorite_restaurant
-        self.reviews
+        best_rest = 0
+        self.reviews.each do |review|
+            if best_rest < review[:star_rating]
+                best_rest = review[:star_rating]
+            end
+        end
+        best_rest
     end
 end
