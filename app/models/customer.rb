@@ -7,6 +7,6 @@ class Customer < ActiveRecord::Base
     end
 
     def favorite_restaurant
-        self.reviews[:star_rating]
+        self.reviews
     end
 end
